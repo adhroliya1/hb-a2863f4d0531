@@ -1,92 +1,130 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Hunt Brothers Pizza at Columbia Citgo — Order Ahead</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#b3261e"><title>Hunt Brothers Pizza · Columbia Citgo · Order Ahead</title>
 <style>
-:root{--r:#b3261e;--ink:#1d1d1f;--mut:#6b6b70;--bg:#f6f5f2;--card:#fff;--ln:#e6e3dc}
-*{box-sizing:border-box}body{margin:0;font:15px/1.4 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);padding-bottom:84px}
-header{background:var(--card);border-bottom:1px solid var(--ln);padding:14px 16px;position:sticky;top:0;z-index:5}
-header h1{margin:0;font-size:18px}header h1 b{color:var(--r)}header p{margin:2px 0 0;color:var(--mut);font-size:13px}
-.preview{background:#fff4d6;color:#6b4e00;font-size:12px;padding:6px 16px;text-align:center}
-nav{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;background:var(--bg);position:sticky;top:61px;z-index:4}
-nav a{flex:none;padding:6px 12px;border:1px solid var(--ln);border-radius:99px;background:#fff;color:var(--ink);text-decoration:none;font-size:13px}
-main{max-width:640px;margin:0 auto;padding:0 16px}h2{font-size:16px;margin:22px 0 8px}
-.item{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.item .n{font-weight:600}.item .d{color:var(--mut);font-size:13px}.item .p{font-weight:600;white-space:nowrap}
-select{font:inherit;padding:4px;border:1px solid var(--ln);border-radius:8px;margin-top:6px;background:#fff}
-button{font:inherit;border:0;border-radius:10px;cursor:pointer}.add{background:var(--r);color:#fff;padding:8px 14px;font-weight:600}
-.bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;z-index:6}
-.bar button{background:var(--r);color:#fff;padding:10px 16px;font-weight:600}
+:root{--r:#b3261e;--rd:#8c1d17;--ink:#1d1d1f;--mut:#5f5f66;--bg:#f7f5f1;--card:#fff;--ln:#e4e0d8;--ok:#1f7a3f}
+*{box-sizing:border-box}html{scroll-padding-top:120px}body{margin:0;font:16px/1.45 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid #1a5fd0;outline-offset:2px}
+.preview{background:#fff4d6;color:#5a4100;font-size:13px;padding:6px 16px;text-align:center}
+.hero{background:linear-gradient(135deg,var(--r),var(--rd));color:#fff;padding:18px 16px 16px}
+.hero .in{max-width:680px;margin:0 auto;display:flex;gap:12px;align-items:center}
+.logo{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;font-size:30px;flex:none}
+.hero h1{margin:0;font-size:20px;line-height:1.2}.hero p{margin:3px 0 0;font-size:14px;opacity:.92}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--ln)}
+nav .in{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;max-width:680px;margin:0 auto}
+nav a{flex:none;padding:8px 14px;border:1px solid var(--ln);border-radius:99px;background:#fff;color:var(--ink);text-decoration:none;font-size:14px;font-weight:500}
+main{max-width:680px;margin:0 auto;padding:0 16px}h2{font-size:18px;margin:24px 0 10px}
+.item{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;margin-bottom:10px;display:flex;gap:12px}
+.ic{width:56px;height:56px;border-radius:12px;background:#fbeae8;display:grid;place-items:center;font-size:30px;flex:none}
+.body{flex:1;min-width:0}.top{display:flex;justify-content:space-between;gap:8px}.n{font-weight:650}.p{font-weight:700;white-space:nowrap}
+.d{color:var(--mut);font-size:14px}.tag{display:inline-block;background:#fdecc8;color:#6b4800;font-size:12px;font-weight:600;border-radius:6px;padding:1px 6px;margin-left:4px}
+.opts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.opts label{font-size:13px;color:var(--mut);display:flex;flex-direction:column}
+select{font:inherit;font-size:15px;padding:7px;border:1px solid var(--ln);border-radius:9px;background:#fff;color:var(--ink);min-height:40px}
+.act{display:flex;justify-content:flex-end;margin-top:8px}
+button{font:inherit;border:0;border-radius:11px;cursor:pointer}
+.add{background:var(--r);color:#fff;padding:9px 18px;font-weight:650;min-height:44px}
+.step{display:inline-flex;align-items:center;border:1px solid var(--ln);border-radius:11px;background:#fff}
+.step button{background:none;width:44px;height:44px;font-size:22px;color:var(--r);font-weight:700}.step span{min-width:26px;text-align:center;font-weight:650}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:6;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(247,245,241,.96);border-top:1px solid var(--ln)}
+.bar button{width:100%;max-width:680px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;background:var(--ink);color:#fff;padding:14px 18px;font-weight:650;min-height:52px}
+.bar button[disabled]{opacity:.5;cursor:default}.badge{background:var(--r);border-radius:99px;padding:1px 9px;margin-right:8px}
 .sheet{display:none;position:fixed;inset:0;background:var(--bg);z-index:10;overflow:auto}.sheet.on{display:block}
-.sheet header{display:flex;justify-content:space-between;align-items:center}.x{background:none;font-size:15px;color:var(--r)}
-.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln)}
-.q button{background:#fff;border:1px solid var(--ln);width:30px;height:30px}.q span{display:inline-block;width:26px;text-align:center}
-label{display:block;font-size:13px;color:var(--mut);margin-top:12px}input,textarea{width:100%;font:inherit;padding:10px;border:1px solid var(--ln);border-radius:10px;background:#fff;margin-top:4px}
-.big{width:100%;background:var(--r);color:#fff;padding:14px;font-weight:700;margin:18px 0}.note{background:#fff;border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;color:var(--mut)}
+.sh{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--ln);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.sh h2{margin:0}.x{background:none;color:var(--r);font-weight:600;padding:10px}
+.line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--ln)}
+.sum{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:6px 14px;margin-top:14px}.sum div{display:flex;justify-content:space-between;padding:6px 0}.sum .t{font-weight:750;font-size:18px;border-top:1px solid var(--ln);padding-top:10px}
+label.f{display:block;font-size:14px;color:var(--mut);margin-top:14px}input,textarea{width:100%;font:inherit;padding:11px;border:1px solid var(--ln);border-radius:11px;background:#fff;margin-top:4px;color:var(--ink)}
+.pay{display:grid;gap:8px;margin-top:8px}.pay label{display:flex;gap:10px;align-items:flex-start;background:#fff;border:2px solid var(--ln);border-radius:12px;padding:12px;cursor:pointer}
+.pay label:has(input:checked){border-color:var(--r)}.pay input{width:auto;margin-top:3px;accent-color:var(--r)}
+.big{width:100%;background:var(--r);color:#fff;padding:15px;font-weight:750;margin:18px 0 30px;font-size:17px;min-height:52px}
+.note{background:#fff;border:1px solid var(--ln);border-radius:11px;padding:10px 12px;font-size:14px;color:var(--mut)}.warn{color:var(--r)}
+.err{color:var(--r);font-weight:600;min-height:1.2em}
 pre{background:#fff;border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:11px;overflow:auto}
+@media (prefers-reduced-motion:no-preference){.pulse{animation:p .35s}@keyframes p{50%{transform:scale(1.03)}}}
 </style></head><body>
-<div class="preview">PREVIEW — orders are not sent and no payment is taken</div>
-<header><h1><b>Hunt Brothers Pizza</b> at Columbia Citgo</h1><p>Order ahead · pay at pickup · [ADDRESS] · [PHONE]</p></header>
-<nav id="nav"></nav><main id="menu"></main>
-<div class="bar" id="bar"><span id="bt">Cart is empty</span><button onclick="openCart()">View cart</button></div>
-<div class="sheet" id="cart"><header><h1>Your order</h1><button class="x" onclick="closeAll()">Close</button></header><main>
-<div id="lines"></div><div class="row"><b>Subtotal</b><b id="sub"></b></div><p class="note">Sales tax is added at the register. Prices are pay-at-pickup.</p>
+<div class="preview" role="note">PREVIEW — orders are not sent and no real payment is taken</div>
+<header class="hero"><div class="in"><div class="logo" aria-hidden="true">🍕</div><div><h1>Hunt Brothers® Pizza</h1><p>at Columbia Citgo · Order ahead for pickup</p><p>[ADDRESS] · <a style="color:#fff" href="tel:[PHONE]">[PHONE]</a></p></div></div></header>
+<nav aria-label="Menu sections"><div class="in" id="nav"></div></nav>
+<main id="menu"></main>
+<div class="bar"><button id="cartbtn" onclick="openCart()" aria-haspopup="dialog" disabled><span><span class="badge" id="bc">0</span>View order</span><span id="bt">$0.00</span></button></div>
+<div id="live" class="sr" aria-live="polite"></div>
+
+<div class="sheet" id="cart" role="dialog" aria-modal="true" aria-labelledby="ct"><div class="sh"><h2 id="ct">Your order</h2><button class="x" onclick="closeAll()">Close</button></div><main>
+<div id="lines"></div>
+<div class="sum" aria-label="Order summary"><div><span>Subtotal</span><span id="sub"></span></div><div><span>Est. sales tax (<span id="trate"></span>)</span><span id="tax"></span></div><div class="t"><span>Total</span><span id="tot"></span></div></div>
 <h2>Pickup details</h2>
-<label>Name<input id="nm" autocomplete="name"></label><label>Mobile phone<input id="ph" type="tel" autocomplete="tel"></label>
-<label>Company / factory (optional)<input id="co"></label>
-<label>Pickup time<select id="pt" style="width:100%;padding:10px"></select></label>
-<label>Notes (cut style, extra napkins, etc.)<textarea id="nt" rows="2"></textarea></label>
-<p class="note" id="bulk">Ordering for a crew? Orders of 10+ items or over $75 need at least 60 minutes' notice — we may call to confirm.</p>
-<button class="big" onclick="submitOrder()">Place order — pay at pickup</button></main></div>
-<div class="sheet" id="done"><header><h1>Order received</h1><button class="x" onclick="location.reload()">New order</button></header><main>
-<p id="dmsg"></p><p class="note">Preview only: this order was not sent to the store. Below is the payload that a backend would forward to the store's Ops WhatsApp.</p><pre id="json"></pre></main></div>
+<label class="f">Name<input id="nm" autocomplete="name" required></label>
+<label class="f">Mobile phone<input id="ph" type="tel" inputmode="tel" autocomplete="tel" required></label>
+<label class="f">Pickup time<select id="pt" style="width:100%"></select></label>
+<label class="f">Notes (cut style, extra napkins…)<textarea id="nt" rows="2" maxlength="400"></textarea></label>
+<p class="note" id="bulk">Ordering for a crew? 10+ items or $75+ needs at least 60 minutes' notice. We may call to confirm.</p>
+<h2>Payment</h2>
+<div class="pay" role="radiogroup" aria-label="Payment method">
+<label><input type="radio" name="pm" value="card" checked><span><b>Pay now with card</b><br><span class="d">Secure Stripe checkout. Apple Pay, Google Pay, cards.</span></span></label>
+<label><input type="radio" name="pm" value="pickup"><span><b>Pay at pickup</b><br><span class="d">Cash or card at the register.</span></span></label></div>
+<p class="err" id="err" role="alert"></p>
+<button class="big" id="go" onclick="submitOrder()">Place order</button></main></div>
+
+<div class="sheet" id="done" role="dialog" aria-modal="true" aria-labelledby="dt"><div class="sh"><h2 id="dt">Order received</h2><button class="x" onclick="location.href=location.pathname">New order</button></div><main>
+<p id="dmsg" style="font-size:17px"></p><p class="note">Preview only: this order was not sent to the store. Payload a backend would forward to Ops WhatsApp:</p><pre id="json"></pre></main></div>
 <script>
+/* ===== config ===== */
+const CFG={
+ store:"AB123 Columbia Citgo",
+ taxRate:0.09,          // PLACEHOLDER — set the real combined rate for the store's address (and match Stripe tax rate)
+ checkoutUrl:"",        // e.g. "https://hb-checkout.<you>.workers.dev/checkout" — empty = preview/demo mode
+ openHour:6,closeHour:22 // pickup window (local time) — PLACEHOLDER
+};
+/* Prices MUST match worker/menu.js (server is source of truth for card payments). */
 const W=["Southern Style","Hot n Spicy"],B=["Home Style","Buffalo"],H=["Pepperoni","Cheese","Three Meat","Veggie","Loaded"];
 const M=[
-["Hunks",[
- ["hunk1","1 Hunk","",3.49,{Hunk:H},{Loaded:3.99}],
- ["hunk2","2 Hunks","Mix any two",6.69,{"Hunk 1":H,"Hunk 2":H}],
- ["hcoke","Hunk + Coke 20oz","Deal",5.00,{Hunk:H}]]],
-["Whole Pizza",[
- ["whole","Whole Pizza","",11.99,{Topping:H}],
- ["whole2","2 Whole Pizzas","",22.98,{"Pizza 1":H,"Pizza 2":H}],
- ["wholex","Each additional pizza","With a whole pizza order",10.99,{Topping:H}],
- ["lto","LTO Pizza","Limited-time pizza",12.99],
- ["dchz","Double Cheese","Add-on",2.19]]],
-["Wings",[
- ["w5","Wings 5 pc","",4.99,{Style:W}],["w10","Wings 10 pc","",9.69,{Style:W}],["w25","Wings 25 pc Party","",22.49,{Style:W}]]],
-["WingBites",[
- ["b5","WingBites 5 oz","",3.39,{Style:B}],["b10","WingBites 10 oz","",6.19,{Style:B}],["b25","WingBites 25 oz","",14.99,{Style:B}]]],
-["Combos",[
- ["c1","Hunk + 5 Wings","",8.09,{Hunk:H,Wings:W}],["c2","Hunk + 10 Wings","",12.69,{Hunk:H,Wings:W}],
- ["c3","Whole Pizza + 10 Wings","",21.19,{Pizza:H,Wings:W}],["c4","Hunk + 5 oz WingBites","",6.49,{Hunk:H,Bites:B}],
- ["c5","Hunk + 10 oz WingBites","",9.49,{Hunk:H,Bites:B}],["c6","Whole Pizza + 10 oz WingBites","",17.59,{Pizza:H,Bites:B}]]]];
-const $=i=>document.getElementById(i),f=n=>"$"+n.toFixed(2);let cart=[];
-M.forEach(([sec,items],si)=>{$("nav").innerHTML+=`<a href="#s${si}">${sec}</a>`;let h=`<h2 id="s${si}">${sec}</h2>`;
- items.forEach(([id,n,d,p,opt])=>{let o="";if(opt)for(const k in opt)o+=`<br><select data-k="${k}" id="${id}-${k}">${opt[k].map(v=>`<option>${v}</option>`).join("")}</select>`;
- h+=`<div class="item"><div><div class="n">${n}</div>${d?`<div class="d">${d}</div>`:""}${o}</div><div style="text-align:right"><div class="p" id="${id}-p">${f(p)}</div><button class="add" onclick="add('${id}')">Add</button></div></div>`});
- $("menu").innerHTML+=h});
-$("menu").addEventListener("change",e=>{const s=e.target;if(s.id==="hunk1-Hunk")$("hunk1-p").textContent=f(s.value==="Loaded"?3.99:3.49)});
-function find(id){for(const[,it]of M)for(const x of it)if(x[0]===id)return x}
-function add(id){const[,n,,p,opt,ov]=find(id);const ch={};if(opt)for(const k in opt)ch[k]=$(id+"-"+k).value;
- let price=p;if(ov&&ov[ch.Hunk])price=ov[ch.Hunk];const key=id+JSON.stringify(ch),ex=cart.find(c=>c.key===key);
- ex?ex.qty++:cart.push({key,id,name:n,options:ch,price,qty:1});render()}
-function qty(i,d){cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);render()}
-const tot=()=>cart.reduce((s,c)=>s+c.price*c.qty,0),cnt=()=>cart.reduce((s,c)=>s+c.qty,0);
-function render(){$("bt").textContent=cnt()?`${cnt()} item${cnt()>1?"s":""} · ${f(tot())}`:"Cart is empty";
- $("lines").innerHTML=cart.map((c,i)=>`<div class="row"><div><b>${c.name}</b><div class="d" style="color:var(--mut);font-size:13px">${Object.values(c.options).join(" · ")}</div>${f(c.price*c.qty)}</div><div class="q"><button onclick="qty(${i},-1)">−</button><span>${c.qty}</span><button onclick="qty(${i},1)">+</button></div></div>`).join("")||"<p>Your cart is empty.</p>";
- $("sub").textContent=f(tot());const big=cnt()>=10||tot()>=75;$("bulk").style.color=big?"var(--r)":"";fillTimes(big?60:20)}
-function fillTimes(lead){const s=$("pt"),cur=s.value;s.innerHTML="";const t=new Date(Date.now()+lead*6e4);t.setMinutes(Math.ceil(t.getMinutes()/15)*15,0,0);
- for(let i=0;i<24;i++){const d=new Date(t.getTime()+i*9e5);s.innerHTML+=`<option value="${d.toISOString()}">${i?"":"Earliest — "}${d.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}</option>`}
+["Hunks","🍕",[["hunk1","1 Hunk","Any style",3.49,{Hunk:H}],["hunk2","2 Hunks","Mix any two",6.69,{"Hunk 1":H,"Hunk 2":H},"Deal"],["hcoke","Hunk + Coke 20oz","",5.00,{Hunk:H},"Deal"]]],
+["Whole Pizza","🍕",[["whole","Whole Pizza","",11.99,{Topping:H}],["whole2","2 Whole Pizzas","",22.98,{"Pizza 1":H,"Pizza 2":H}],["wholex","Each additional pizza","With a whole pizza order",10.99,{Topping:H}],["lto","LTO Pizza","Limited-time pizza",12.99],["dchz","Double Cheese","Add-on",2.19]]],
+["Wings","🍗",[["w5","Wings 5 pc","",4.99,{Style:W}],["w10","Wings 10 pc","",9.69,{Style:W}],["w25","Wings 25 pc Party","",22.49,{Style:W}]]],
+["WingBites","🍗",[["b5","WingBites 5 oz","",3.39,{Style:B}],["b10","WingBites 10 oz","",6.19,{Style:B}],["b25","WingBites 25 oz","",14.99,{Style:B}]]],
+["Combos","🥤",[["c1","Hunk + 5 Wings","",8.09,{Hunk:H,Wings:W}],["c2","Hunk + 10 Wings","",12.69,{Hunk:H,Wings:W}],["c3","Whole Pizza + 10 Wings","",21.19,{Pizza:H,Wings:W}],["c4","Hunk + 5 oz WingBites","",6.49,{Hunk:H,Bites:B}],["c5","Hunk + 10 oz WingBites","",9.49,{Hunk:H,Bites:B}],["c6","Whole Pizza + 10 oz WingBites","",17.59,{Pizza:H,Bites:B}]]]];
+const $=i=>document.getElementById(i),f=n=>"$"+n.toFixed(2),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let cart=JSON.parse(sessionStorage.getItem("hbcart")||"[]");
+M.forEach(([sec,ic,items],si)=>{$("nav").innerHTML+=`<a href="#s${si}">${sec}</a>`;let h=`<section aria-labelledby="s${si}"><h2 id="s${si}">${sec}</h2>`;
+ items.forEach(([id,n,d,p,opt,tag])=>{let o="";if(opt)for(const k in opt)o+=`<label>${k}<select id="${id}-${k}">${opt[k].map(v=>`<option>${v}</option>`).join("")}</select></label>`;
+ h+=`<div class="item"><div class="ic" aria-hidden="true">${ic}</div><div class="body"><div class="top"><div><span class="n">${n}</span>${tag?`<span class="tag">${tag}</span>`:""}${d?`<div class="d">${d}</div>`:""}</div><div class="p">${f(p)}</div></div>${o?`<div class="opts">${o}</div>`:""}<div class="act"><button class="add" onclick="add('${id}')" aria-label="Add ${n} to order">Add</button></div></div></div>`});
+ $("menu").innerHTML+=h+"</section>"});
+function find(id){for(const[,,it]of M)for(const x of it)if(x[0]===id)return x}
+function add(id){const[,n,,p,opt]=find(id);const ch={};if(opt)for(const k in opt)ch[k]=$(id+"-"+k).value;
+ const key=id+JSON.stringify(ch),ex=cart.find(c=>c.key===key);ex?ex.qty++:cart.push({key,id,name:n,options:ch,price:p,qty:1});
+ render();$("live").textContent=`Added ${n}. ${cnt()} items, ${f(tot())}.`;const b=$("cartbtn");b.classList.remove("pulse");void b.offsetWidth;b.classList.add("pulse")}
+function qty(i,d){const n=cart[i].name;cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);render();$("live").textContent=`${n} quantity updated. Total ${f(tot()+tx())}.`}
+const tot=()=>cart.reduce((s,c)=>s+c.price*c.qty,0),cnt=()=>cart.reduce((s,c)=>s+c.qty,0),tx=()=>Math.round(tot()*CFG.taxRate*100)/100;
+function render(){sessionStorage.setItem("hbcart",JSON.stringify(cart));
+ $("bc").textContent=cnt();$("bt").textContent=f(tot());$("cartbtn").disabled=!cnt();
+ $("lines").innerHTML=cart.map((c,i)=>`<div class="line"><div><b>${esc(c.name)}</b><div class="d">${esc(Object.values(c.options).join(" · "))}</div><div>${f(c.price*c.qty)}</div></div><div class="step" role="group" aria-label="Quantity for ${esc(c.name)}"><button onclick="qty(${i},-1)" aria-label="${c.qty>1?"Decrease":"Remove"} ${esc(c.name)}">−</button><span>${c.qty}</span><button onclick="qty(${i},1)" aria-label="Increase ${esc(c.name)}">+</button></div></div>`).join("")||"<p>Your order is empty.</p>";
+ $("trate").textContent=(CFG.taxRate*100).toFixed(2).replace(/\.?0+$/,"")+"%";$("sub").textContent=f(tot());$("tax").textContent=f(tx());$("tot").textContent=f(tot()+tx());
+ const big=cnt()>=10||tot()>=75;$("bulk").classList.toggle("warn",big);fillTimes(big?60:20);if(!cnt())closeAll()}
+function fillTimes(lead){const s=$("pt"),cur=s.value;s.innerHTML="";const t=new Date(Date.now()+lead*6e4);t.setMinutes(Math.ceil(t.getMinutes()/15)*15,0,0);let n=0;
+ for(let i=0;n<24&&i<200;i++){const d=new Date(t.getTime()+i*9e5),h=d.getHours();if(h<CFG.openHour||h>=CFG.closeHour)continue;
+  const day=d.toDateString()===new Date().toDateString()?"Today":"Tomorrow";s.innerHTML+=`<option value="${d.toISOString()}">${n?"":"ASAP — "}${day} ${d.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}</option>`;n++}
  if([...s.options].some(o=>o.value===cur))s.value=cur}
-function openCart(){render();$("cart").classList.add("on")}function closeAll(){$("cart").classList.remove("on")}
-function submitOrder(){if(!cart.length)return alert("Add something first.");const nm=$("nm").value.trim(),ph=$("ph").value.replace(/\D/g,"");
- if(!nm||ph.length<10)return alert("Please enter your name and a 10-digit phone.");
- const o={version:1,store:"AB123 Columbia Citgo",ref:"HB-"+Date.now().toString(36).toUpperCase().slice(-5),created_at:new Date().toISOString(),
-  customer:{name:nm,phone:ph,company:$("co").value.trim()||null},pickup_at:$("pt").value,notes:$("nt").value.trim()||null,
-  large_order:cnt()>=10||tot()>=75,payment:{method:"pay_at_pickup",status:"unpaid"},
-  items:cart.map(({id,name,options,price,qty})=>({id,name,options,unit_price:price,qty,line_total:+(price*qty).toFixed(2)})),
-  subtotal:+tot().toFixed(2),tax_note:"tax added at register"};
- console.log("ORDER_PAYLOAD",JSON.stringify(o));$("json").textContent=JSON.stringify(o,null,2);
- $("dmsg").innerHTML=`Thanks ${nm}! Order <b>${o.ref}</b> · ${f(o.subtotal)} + tax · pickup ${new Date(o.pickup_at).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}.`;
- closeAll();$("done").classList.add("on");window.scrollTo(0,0)}
-render();
+let last;function openCart(){last=document.activeElement;render();$("cart").classList.add("on");$("ct").tabIndex=-1;$("ct").focus()}
+function closeAll(){if($("cart").classList.contains("on")){$("cart").classList.remove("on");last&&last.focus()}}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+/* ===== payment adapter (Stripe Checkout via serverless function) ===== */
+const Pay={
+ async card(o){if(!CFG.checkoutUrl)return {demo:true};
+  const r=await fetch(CFG.checkoutUrl,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({ref:o.ref,customer:o.customer,pickup_at:o.pickup_at,notes:o.notes,items:o.items.map(({id,options,qty})=>({id,options,qty}))})});
+  const j=await r.json();if(!r.ok||!j.url)throw new Error(j.error||"Payment is unavailable right now");location.href=j.url;return {redirect:true}}};
+async function submitOrder(){const err=$("err");err.textContent="";const nm=$("nm").value.trim(),ph=$("ph").value.replace(/\D/g,"").replace(/^1(?=\d{10}$)/,"");
+ if(!nm){err.textContent="Please enter your name.";return $("nm").focus()}if(ph.length!==10){err.textContent="Please enter a 10-digit phone.";return $("ph").focus()}
+ const pm=document.querySelector("[name=pm]:checked").value;
+ const o={version:2,store:CFG.store,ref:"HB-"+Date.now().toString(36).toUpperCase().slice(-5),created_at:new Date().toISOString(),customer:{name:nm,phone:ph},pickup_at:$("pt").value,notes:$("nt").value.trim()||null,large_order:cnt()>=10||tot()>=75,
+  payment:{method:pm==="card"?"stripe_checkout":"pay_at_pickup",status:"unpaid"},items:cart.map(({id,name,options,price,qty})=>({id,name,options,unit_price:price,qty,line_total:+(price*qty).toFixed(2)})),
+  subtotal:+tot().toFixed(2),est_tax:tx(),est_total:+(tot()+tx()).toFixed(2)};
+ const go=$("go");go.disabled=true;go.textContent="Working…";
+ try{if(pm==="card"){const r=await Pay.card(o);if(r.redirect)return;o.payment.status="DEMO — no charge (Stripe not connected yet)"}done(o)}
+ catch(e){err.textContent=e.message+" — you can choose Pay at pickup instead."}finally{go.disabled=false;go.textContent="Place order"}}
+function done(o){$("json").textContent=JSON.stringify(o,null,2);
+ $("dmsg").innerHTML=`Thanks ${esc(o.customer.name)}! Order <b>${o.ref}</b> · ${f(o.est_total)} · pickup ${new Date(o.pickup_at).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}.`;
+ cart=[];sessionStorage.removeItem("hbcart");$("cart").classList.remove("on");$("done").classList.add("on");$("dt").tabIndex=-1;$("dt").focus()}
+const q=new URLSearchParams(location.search);
+if(q.get("paid")){cart=[];sessionStorage.removeItem("hbcart");$("dmsg").textContent="Payment received — thank you! Your order is being prepared.";$("json").textContent="";$("done").classList.add("on")}
+render();if(q.get("canceled")&&cart.length){openCart();$("err").textContent="Payment canceled. Your order is still here."}
 </script></body></html>
