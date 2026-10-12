@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Hunt Brothers Pizza at Columbia Citgo — Order Ahead</title>
+<style>
+:root{--r:#b3261e;--ink:#1d1d1f;--mut:#6b6b70;--bg:#f6f5f2;--card:#fff;--ln:#e6e3dc}
+*{box-sizing:border-box}body{margin:0;font:15px/1.4 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);padding-bottom:84px}
+header{background:var(--card);border-bottom:1px solid var(--ln);padding:14px 16px;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:18px}header h1 b{color:var(--r)}header p{margin:2px 0 0;color:var(--mut);font-size:13px}
+.preview{background:#fff4d6;color:#6b4e00;font-size:12px;padding:6px 16px;text-align:center}
+nav{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;background:var(--bg);position:sticky;top:61px;z-index:4}
+nav a{flex:none;padding:6px 12px;border:1px solid var(--ln);border-radius:99px;background:#fff;color:var(--ink);text-decoration:none;font-size:13px}
+main{max-width:640px;margin:0 auto;padding:0 16px}h2{font-size:16px;margin:22px 0 8px}
+.item{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.item .n{font-weight:600}.item .d{color:var(--mut);font-size:13px}.item .p{font-weight:600;white-space:nowrap}
+select{font:inherit;padding:4px;border:1px solid var(--ln);border-radius:8px;margin-top:6px;background:#fff}
+button{font:inherit;border:0;border-radius:10px;cursor:pointer}.add{background:var(--r);color:#fff;padding:8px 14px;font-weight:600}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--ink);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;z-index:6}
+.bar button{background:var(--r);color:#fff;padding:10px 16px;font-weight:600}
+.sheet{display:none;position:fixed;inset:0;background:var(--bg);z-index:10;overflow:auto}.sheet.on{display:block}
+.sheet header{display:flex;justify-content:space-between;align-items:center}.x{background:none;font-size:15px;color:var(--r)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--ln)}
+.q button{background:#fff;border:1px solid var(--ln);width:30px;height:30px}.q span{display:inline-block;width:26px;text-align:center}
+label{display:block;font-size:13px;color:var(--mut);margin-top:12px}input,textarea{width:100%;font:inherit;padding:10px;border:1px solid var(--ln);border-radius:10px;background:#fff;margin-top:4px}
+.big{width:100%;background:var(--r);color:#fff;padding:14px;font-weight:700;margin:18px 0}.note{background:#fff;border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:13px;color:var(--mut)}
+pre{background:#fff;border:1px solid var(--ln);border-radius:10px;padding:10px;font-size:11px;overflow:auto}
+</style></head><body>
+<div class="preview">PREVIEW — orders are not sent and no payment is taken</div>
+<header><h1><b>Hunt Brothers Pizza</b> at Columbia Citgo</h1><p>Order ahead · pay at pickup · [ADDRESS] · [PHONE]</p></header>
+<nav id="nav"></nav><main id="menu"></main>
+<div class="bar" id="bar"><span id="bt">Cart is empty</span><button onclick="openCart()">View cart</button></div>
+<div class="sheet" id="cart"><header><h1>Your order</h1><button class="x" onclick="closeAll()">Close</button></header><main>
+<div id="lines"></div><div class="row"><b>Subtotal</b><b id="sub"></b></div><p class="note">Sales tax is added at the register. Prices are pay-at-pickup.</p>
+<h2>Pickup details</h2>
+<label>Name<input id="nm" autocomplete="name"></label><label>Mobile phone<input id="ph" type="tel" autocomplete="tel"></label>
+<label>Company / factory (optional)<input id="co"></label>
+<label>Pickup time<select id="pt" style="width:100%;padding:10px"></select></label>
+<label>Notes (cut style, extra napkins, etc.)<textarea id="nt" rows="2"></textarea></label>
+<p class="note" id="bulk">Ordering for a crew? Orders of 10+ items or over $75 need at least 60 minutes' notice — we may call to confirm.</p>
+<button class="big" onclick="submitOrder()">Place order — pay at pickup</button></main></div>
+<div class="sheet" id="done"><header><h1>Order received</h1><button class="x" onclick="location.reload()">New order</button></header><main>
+<p id="dmsg"></p><p class="note">Preview only: this order was not sent to the store. Below is the payload that a backend would forward to the store's Ops WhatsApp.</p><pre id="json"></pre></main></div>
+<script>
+const W=["Southern Style","Hot n Spicy"],B=["Home Style","Buffalo"],H=["Pepperoni","Cheese","Three Meat","Veggie","Loaded"];
+const M=[
+["Hunks",[
+ ["hunk1","1 Hunk","",3.49,{Hunk:H},{Loaded:3.99}],
+ ["hunk2","2 Hunks","Mix any two",6.69,{"Hunk 1":H,"Hunk 2":H}],
+ ["hcoke","Hunk + Coke 20oz","Deal",5.00,{Hunk:H}]]],
+["Whole Pizza",[
+ ["whole","Whole Pizza","",11.99,{Topping:H}],
+ ["whole2","2 Whole Pizzas","",22.98,{"Pizza 1":H,"Pizza 2":H}],
+ ["wholex","Each additional pizza","With a whole pizza order",10.99,{Topping:H}],
+ ["lto","LTO Pizza","Limited-time pizza",12.99],
+ ["dchz","Double Cheese","Add-on",2.19]]],
+["Wings",[
+ ["w5","Wings 5 pc","",4.99,{Style:W}],["w10","Wings 10 pc","",9.69,{Style:W}],["w25","Wings 25 pc Party","",22.49,{Style:W}]]],
+["WingBites",[
+ ["b5","WingBites 5 oz","",3.39,{Style:B}],["b10","WingBites 10 oz","",6.19,{Style:B}],["b25","WingBites 25 oz","",14.99,{Style:B}]]],
+["Combos",[
+ ["c1","Hunk + 5 Wings","",8.09,{Hunk:H,Wings:W}],["c2","Hunk + 10 Wings","",12.69,{Hunk:H,Wings:W}],
+ ["c3","Whole Pizza + 10 Wings","",21.19,{Pizza:H,Wings:W}],["c4","Hunk + 5 oz WingBites","",6.49,{Hunk:H,Bites:B}],
+ ["c5","Hunk + 10 oz WingBites","",9.49,{Hunk:H,Bites:B}],["c6","Whole Pizza + 10 oz WingBites","",17.59,{Pizza:H,Bites:B}]]]];
+const $=i=>document.getElementById(i),f=n=>"$"+n.toFixed(2);let cart=[];
+M.forEach(([sec,items],si)=>{$("nav").innerHTML+=`<a href="#s${si}">${sec}</a>`;let h=`<h2 id="s${si}">${sec}</h2>`;
+ items.forEach(([id,n,d,p,opt])=>{let o="";if(opt)for(const k in opt)o+=`<br><select data-k="${k}" id="${id}-${k}">${opt[k].map(v=>`<option>${v}</option>`).join("")}</select>`;
+ h+=`<div class="item"><div><div class="n">${n}</div>${d?`<div class="d">${d}</div>`:""}${o}</div><div style="text-align:right"><div class="p" id="${id}-p">${f(p)}</div><button class="add" onclick="add('${id}')">Add</button></div></div>`});
+ $("menu").innerHTML+=h});
+$("menu").addEventListener("change",e=>{const s=e.target;if(s.id==="hunk1-Hunk")$("hunk1-p").textContent=f(s.value==="Loaded"?3.99:3.49)});
+function find(id){for(const[,it]of M)for(const x of it)if(x[0]===id)return x}
+function add(id){const[,n,,p,opt,ov]=find(id);const ch={};if(opt)for(const k in opt)ch[k]=$(id+"-"+k).value;
+ let price=p;if(ov&&ov[ch.Hunk])price=ov[ch.Hunk];const key=id+JSON.stringify(ch),ex=cart.find(c=>c.key===key);
+ ex?ex.qty++:cart.push({key,id,name:n,options:ch,price,qty:1});render()}
+function qty(i,d){cart[i].qty+=d;if(cart[i].qty<1)cart.splice(i,1);render()}
+const tot=()=>cart.reduce((s,c)=>s+c.price*c.qty,0),cnt=()=>cart.reduce((s,c)=>s+c.qty,0);
+function render(){$("bt").textContent=cnt()?`${cnt()} item${cnt()>1?"s":""} · ${f(tot())}`:"Cart is empty";
+ $("lines").innerHTML=cart.map((c,i)=>`<div class="row"><div><b>${c.name}</b><div class="d" style="color:var(--mut);font-size:13px">${Object.values(c.options).join(" · ")}</div>${f(c.price*c.qty)}</div><div class="q"><button onclick="qty(${i},-1)">−</button><span>${c.qty}</span><button onclick="qty(${i},1)">+</button></div></div>`).join("")||"<p>Your cart is empty.</p>";
+ $("sub").textContent=f(tot());const big=cnt()>=10||tot()>=75;$("bulk").style.color=big?"var(--r)":"";fillTimes(big?60:20)}
+function fillTimes(lead){const s=$("pt"),cur=s.value;s.innerHTML="";const t=new Date(Date.now()+lead*6e4);t.setMinutes(Math.ceil(t.getMinutes()/15)*15,0,0);
+ for(let i=0;i<24;i++){const d=new Date(t.getTime()+i*9e5);s.innerHTML+=`<option value="${d.toISOString()}">${i?"":"Earliest — "}${d.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}</option>`}
+ if([...s.options].some(o=>o.value===cur))s.value=cur}
+function openCart(){render();$("cart").classList.add("on")}function closeAll(){$("cart").classList.remove("on")}
+function submitOrder(){if(!cart.length)return alert("Add something first.");const nm=$("nm").value.trim(),ph=$("ph").value.replace(/\D/g,"");
+ if(!nm||ph.length<10)return alert("Please enter your name and a 10-digit phone.");
+ const o={version:1,store:"AB123 Columbia Citgo",ref:"HB-"+Date.now().toString(36).toUpperCase().slice(-5),created_at:new Date().toISOString(),
+  customer:{name:nm,phone:ph,company:$("co").value.trim()||null},pickup_at:$("pt").value,notes:$("nt").value.trim()||null,
+  large_order:cnt()>=10||tot()>=75,payment:{method:"pay_at_pickup",status:"unpaid"},
+  items:cart.map(({id,name,options,price,qty})=>({id,name,options,unit_price:price,qty,line_total:+(price*qty).toFixed(2)})),
+  subtotal:+tot().toFixed(2),tax_note:"tax added at register"};
+ console.log("ORDER_PAYLOAD",JSON.stringify(o));$("json").textContent=JSON.stringify(o,null,2);
+ $("dmsg").innerHTML=`Thanks ${nm}! Order <b>${o.ref}</b> · ${f(o.subtotal)} + tax · pickup ${new Date(o.pickup_at).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})}.`;
+ closeAll();$("done").classList.add("on");window.scrollTo(0,0)}
+render();
+</script></body></html>
